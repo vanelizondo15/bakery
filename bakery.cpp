@@ -16,16 +16,17 @@ int main()
     float total;
     total = 0;
     carrito = 0;
-    const string usuario = "u";
-    const string contra = "1";
+    const string usuario = "USUARIO";
+    const string contra = "12345";
     string user, password,star1;
     const int intentos=3;
     int cont=0;
     double pago;
     double cambio;
     float estrella;
-    int mayor=0, menor=0;
-    int number[]={200,300,10}, cuantos;
+    int mayor=0;
+    int menor=1000;
+    int num[5]={280,300,250,280,325};
 
 
         
@@ -132,16 +133,9 @@ int main()
                      // Se calcula el cambio a recibir
                 cambio = pago - carrito;
                 cout << "Su cambio es de: $ "<<cambio<<endl;
-                for (int i=0; i<cuantos;i++)
-                {
-                    if (number[i]>mayor)
-                    {
-                        mayor=number[i];
- // Es igual a existencia[i] = existencia[i] - vendidos
-                      
-                    }
-                }    
-                cout <<mayor;
+                for(int a=0; a<10;a++){
+                    
+                }
                     cout<<endl;
                 
                 
@@ -150,7 +144,19 @@ int main()
             case 3:
                 cout << "           " << endl;
                 cout << "¿Qué producto desea buscar el mayor o menor? " << endl;
-    
+                for(int a=0;a<5;a++){
+                    if(num[a]>mayor){
+                        mayor= num[a];
+                    }
+                    else {
+                        if(num[a]<menor && menor != 0){
+                            menor= num[a];
+                        }
+                    }                       
+                }
+                cout << "El costo mayor es de $" <<mayor <<endl;
+                cout << "El costo menor es de $" <<menor <<endl;
+
                 break;
 
             case 4:
